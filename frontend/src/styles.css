@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.verification-page{
+    width: 100%;
+    height:100vh;
+    background-image: url('../../../assets/images/background_image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.otp-header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.header{
+    color: #8533ff;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+.container{
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+.btn{
+    border-radius: 15px;
+    border: none;
+    padding: 2px;
+    width: 40%;
+    padding: 10px;
+    background-color: #8533ff;
+    color: white;
+    font-weight: 600;
+
+}
+.form-group{
+    text-align: center;
+    width: 300px;
+    height: 31px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+.sub-group_t{
+    display: flex;
+    flex-direction: column;
+    justify-items: baseline;
+    align-items: center;
+    gap: 30px;
+}
+
+.sub-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+.sub-group_t-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.sub-content{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem
+}
+.disabled{
+    opacity: 0.5;
+}

@@ -1,0 +1,13 @@
+
+.form-sub-group{
+    text-align: center;
+    height: 31px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+.disabled{
+    opacity: 0.5;
+}

@@ -1,0 +1,29 @@
+<div class="verification-page">
+    <div class="otp-header">
+        <div class="container">
+            <div class="sub-group_t">
+                <ng-container>
+                    <img src="../../../assets/images/OTPicon.png" width="128px" height="105px"/>
+                </ng-container>
+            <div class="sub-group_t-content">
+                <div class="header">OTP Verification</div>
+                <div style="color: grey;font-size: 16px;">Enter the OTP sent to <b style="color: black;">+91 - 1234567890</b></div>
+            </div>
+            
+            </div>
+            <div class="sub-content">
+                <input class="input" type="text" id="OTP_field1" maxlength="1" [(ngModel)]="OTP_field1" />
+                <input class="input" type="text" id="OTP_field2" maxlength="1" [(ngModel)]="OTP_field2"/>
+                <input class="input" type="text" id="OTP_field3" maxlength="1" [(ngModel)]="OTP_field3"/>
+               <input class="input" type="text" id="OTP_field4" maxlength="1" [(ngModel)]="OTP_field4"/>
+            </div> 
+            <div style="color:grey;font-size: 13px;">Don't receive the OTP? 
+                <span style="color: coral;font-weight: 600;">RESEND OTP</span> </div>   
+            <button type="submit" class="btn" 
+             [disabled]="(OTP_field1 == undefined || OTP_field2==undefined || OTP_field3 == undefined || OTP_field4 == undefined) ? true : false" 
+                    [ngClass]="(OTP_field1 == undefined || OTP_field2==undefined || OTP_field3 == undefined || OTP_field4 == undefined ) ? 'disabled' : '' "
+                  (click)="verifyOTP(OTP_field1,OTP_field2,OTP_field3,OTP_field4)"><b>VERIFY & PROCEED</b></button>   
+        </div>
+    </div>    
+
+</div>

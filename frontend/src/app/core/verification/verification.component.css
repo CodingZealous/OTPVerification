@@ -1,0 +1,20 @@
+
+.btn{
+    border-radius: 15px;
+    border: none;
+    width: 82%;
+    padding: 12px 36px 12px 36px !important;
+    background-color: #8533ff;
+    color: white;
+    font-weight: 600;
+
+}
+.input{
+    outline: none;
+    width: 39px;
+    height: 26px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid grey
+}

@@ -1,0 +1,25 @@
+<div class="verification-page">
+    <div class="otp-header">
+        <div class="container" style="gap:40px">
+            <div class="sub-group_t">
+                <ng-container>
+                    <img src="../../../assets/images/OTPicon.png" width="128px" height="105px"/>
+                </ng-container>
+            <div class="sub-group_t-content">
+                <div class="header">OTP Verification</div>
+                <div style="color: grey;font-size: 16px;"> we will send you an <b style="color: black;">One Time Password</b>on this mobile number</div>
+            </div>
+            
+            </div>
+            <div class="sub-content">
+                <select class="form-sub-group" [(ngModel)]="code"> 
+                    <option *ngFor="let selecCode of selectedCodes">{{selecCode.code}}</option> 
+                  </select>
+                  <input type="text" class="form-group" minlength="10" maxlength="10" [(ngModel)]="phone"placeholder="Enter your mobile number" pattern="[1-9]{1}[0-9]{9}"/>
+            </div>   
+            <button type="button" class="btn" [disabled]="(phone!=undefined && phone.length === '10') ? true : false" 
+                    [ngClass]="(phone === undefined || phone.length != '10') ? 'disabled' : '' " (click)="sendOTP(code,phone)"><b>SEND OTP</b></button>   
+        </div>
+    </div>    
+
+</div>
