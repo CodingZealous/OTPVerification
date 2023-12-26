@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CorefacadeService {
   public url ="http://localhost"
   public port = 9000;
-  public request_ID :any;
+  public OTPresponse:any;
 
   constructor(public http:HttpClient) { }
 
@@ -17,7 +17,7 @@ export class CorefacadeService {
   }
 
   public VerifyOTP(code:any){
-    return this.http.post(`${this.url}`+":"+`${this.port}`+"/Auth/verify?request_id="+`${this.request_ID}&code=`+`${code}`,{});
+    return this.http.post(`${this.url}`+":"+`${this.port}`+"/Auth/verify?request_id="+`${this.OTPresponse.request_ID}&code=`+`${code}`,{});
 
   }
 }

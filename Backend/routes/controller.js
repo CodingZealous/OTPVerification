@@ -10,16 +10,16 @@ const vonage = new Vonage({
 
 router.post('/sendOTP',(req,res) => {
     vonage.verify.start({
-        number: "917730865642",
+        number: req.query.phone,
         brand: "Vonage"
       })
       .then(resp => {
-        console.log(resp)
         return res.status(200).json({
             status: true,
             message:'OTP Sent Successfully',
             result: {
               requestID: resp.request_id,
+              mobileNumber: `${req.query.phone}`
             },
          });
       }).catch(err => {

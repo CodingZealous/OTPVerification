@@ -34,7 +34,7 @@ public async sendOTP(code:any,phone:any){
     await this.coreServiceService.sendOTP(parameter).subscribe((res)=> {
       this.response = res;
       if(this.response.status){
-        this.coreServiceService.request_ID = this.response.result.request_id;
+        this.coreServiceService.OTPresponse = this.response.result;
         this.router.navigate(['/verify'])  
       }      
     });
